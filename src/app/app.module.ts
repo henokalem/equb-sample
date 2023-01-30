@@ -10,6 +10,8 @@ import { EqubComponent } from './equb/equb.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MaterialModule} from '../material.module';
+import { ApiServiceService } from './equb-main/api-service.service';
+import { HttpClientModule } from '@angular/common/http';
 import { ResultComponentComponent } from './equb-main/result-component/result-component.component';
 
 @NgModule({
@@ -27,9 +29,10 @@ import { ResultComponentComponent } from './equb-main/result-component/result-co
     BrowserAnimationsModule,
     FormsModule,
     MaterialModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ApiServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

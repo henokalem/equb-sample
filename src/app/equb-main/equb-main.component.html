@@ -5,20 +5,24 @@
             <div class="form-fields">
                 <div class="fields">
                     <mat-form-field appearance="fill">
-                        <mat-label>Name</mat-label>
+                        <mat-label>User Name</mat-label>
                         <input matInput formControlName="name">
                     </mat-form-field>
                     <mat-form-field appearance="fill">
-                        <mat-label>Age</mat-label>
-                        <input type="number" matInput formControlName="age">
+                        <mat-label>User Id</mat-label>
+                        <input type="number" matInput formControlName="userId">
                     </mat-form-field>
+                    <input type="hidden" formControlName="hidden_input">
                 </div>
                 <div class="fields">
                     <button mat-button type="submit">Submit</button>
                 </div>
             </div>
         </form>
-        <app-result-component [new_age_object]="new_age_object"></app-result-component>
+        <!-- {{nested_object.bpi.usd}}
+        {{nested_object.disclamer}}
+        {{nested_object.chartName}} -->
+        <app-result-component [new_age_object]="new_age_object_2" [nested_object]="nested_object"></app-result-component>
     </div>
 
 </div>

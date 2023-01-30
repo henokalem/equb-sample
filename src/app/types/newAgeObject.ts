@@ -1,5 +1,5 @@
 export interface NewAgeObject {
     name: string;
-    age: number;
+    userId: number;
     new_age: number;
 }
